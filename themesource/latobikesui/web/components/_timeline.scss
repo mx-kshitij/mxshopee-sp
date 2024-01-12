@@ -1,0 +1,49 @@
+.widget-timeline-date-header {
+    padding: 4px 8px;
+}
+
+.widget-timeline-events-wrapper {
+    margin-left: 22px;
+}
+
+.widget-timeline-content-wrapper {
+    .widget-timeline-info-wrapper {
+        margin-right: 0;
+    }
+}
+
+.widget-timeline-icon-wrapper {
+    background-color: #fff;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+
+    .mxwc-timeline-dot,
+    .widget-timeline-icon-circle {
+        width: 14px;
+        height: 14px;
+        background-color: $gray;
+
+        &.mxwc-timeline-dot-danger,
+        &.timeline-danger {
+            background-color: $brand-danger;
+        }
+
+        &.mxwc-timeline-dot-warning,
+        &.timeline-warning {
+            background-color: $brand-warning;
+        }
+
+        &.mxwc-timeline-dot-primary {
+            background-color: $brand-primary;
+        }
+    }
+}
+
+.widget-timeline-event {
+    margin-bottom: 0;
+
+    &:not(:last-of-type) {
+        border-left: none;
+    }
+}

@@ -1,0 +1,13 @@
+.webXR{
+    position: relative;
+    height: 50vh;
+    width: 50vw;
+    margin: 0 auto;
+    canvas{
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+
+    }
+}

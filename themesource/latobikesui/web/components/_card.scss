@@ -1,0 +1,21 @@
+.card {
+    padding: 22px;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 12px;
+
+    &--secondary {
+        background-color: $gray-light;
+    }
+
+    &--feedback {
+        margin-top: 40px !important;
+        overflow: initial;
+        padding-top: 25px;
+        
+        h3 {
+            position: absolute;
+            top: -16px;
+        }
+    }
+}

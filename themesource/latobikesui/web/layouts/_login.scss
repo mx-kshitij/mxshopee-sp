@@ -1,0 +1,280 @@
+.login-page {
+    position: relative;
+
+    .login-logo {
+        max-width: 150px;
+        position: absolute;
+        top: 5vh;
+        left: 5vw;
+
+        @media screen and (max-width: $screen-sm) {
+            max-width: 100px;
+            width: 100px;
+            top: 3vh;
+            left: 5vw;
+        }
+        
+        @media (max-width: 991px) {
+            max-width: 150px;
+            margin: 0 auto;
+            margin-top: 0vh;
+            margin-bottom: 2vh;
+            display: flex;
+        }
+    }
+
+    .powered-by-wrapper {
+        bottom: 5vh;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+
+        span {
+            color: #fff;
+        }
+    }
+}
+
+.img-fullBackground {
+    top: 0;
+    position: fixed;
+    z-index: 0;
+    width: 100%;
+    object-fit: cover;
+
+    &:focus{
+        outline: 0;
+    }
+}
+
+.form-signup {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    height: fit-content;
+    margin: auto;
+    left: 0;
+    right: 0;
+    
+    @media screen and (max-width: $screen-sm) {
+        width: 100%;
+    }
+
+    @media (max-width: $screen-md) {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 50px;
+
+        @media screen and (max-width: $screen-sm) {
+            font-size: 5vh;
+        }
+    }
+
+    span {
+        max-width: 30vw;
+        margin: auto;
+
+        @media screen and (max-width: $screen-sm) {
+            max-width: 80vw;
+        }
+    }
+}
+
+.login-container {
+    max-width: 50%;
+    text-align: center;
+    margin: auto;
+    margin-top: 5vh;
+
+    @media screen and (max-width: $screen-sm) {
+        max-width: 80%;
+    }
+
+    .login-textbox {
+        position: relative;
+
+        input {
+            border-radius: 4px;
+            padding: 10px 16px;
+            z-index: 2;
+            background-color: $gray-primary;
+            transition-property: border-width .1s ease-in-out;
+
+            &:focus {
+                border-width: 2px;
+                background-color: $gray-primary;
+            }
+
+            &:-internal-autofill-selected {
+                -webkit-box-shadow: 0 0 0px 1000px $gray-primary inset;
+            }
+        }
+
+        .control-label {
+            position: absolute;    
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: -moz-fit-content;
+            height: fit-content; 
+            font-size: 16px;
+            left: 15px;
+            z-index: 4;
+            line-height: 1.5;
+            letter-spacing: 0.15px;
+            color: $brand-primary;
+            background-color: transparent;
+            transition: all .2s ease-in-out;
+        }
+        
+        &.has-content,
+        &:focus-within {
+            .control-label {
+                top: -52px;
+                left: 10px;
+                color: #fff;
+                background: $gray-darker;
+                padding: 0 10px 0 10px;
+                border-radius: 4px;
+                z-index: 3;
+            }
+            
+            input {
+                border: 1px solid $brand-primary;
+
+                &:focus {
+                    background-color: $gray-primary;
+                    color: $brand-primary;
+                }
+            }
+        }
+
+        &.email-textbox {
+            margin-bottom: 30px;
+        }
+
+        &.password-textbox {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.btn-signin {
+    background-color: #01786F;
+    border-color: $brand-primary;
+    border-radius: 4px;
+    color: #fff;
+    height: 44px;
+}
+
+.login-message {
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: regular;
+    color: #ffffff;
+    background-color: $brand-danger;
+    border-width: 0px;
+    border-radius: 35px;
+    text-align: center;
+}
+
+.forgot-password {
+    &.mx-link {
+        font-size: 14px;
+        text-align: center;
+        color: #fff;
+    
+        &:hover {
+            color: $brand-primary;
+        }
+    }
+}
+
+.password-wrapper {
+    position: relative;
+
+    .toggle-password {
+        padding: 0;
+        background: transparent;
+        border: none;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+    
+        &:hover {
+            background: transparent;
+        }
+    }
+}
+
+.dropdown-wrapper {
+    .mx-dropdown {
+        margin-bottom: 0;
+        width: 100%;
+        
+        select.form-control {
+            height: 44px;
+            border-radius: 4px;
+            padding: 10px 16px;
+            z-index: 2;
+            background-color: $gray-primary;
+            transition-property: border-width .1s ease-in-out;
+        
+            &:focus {
+                border-width: 2px;
+                background-color: $gray-primary;
+            }
+        }
+    }
+
+    .btn {
+        height: 44px;
+    }
+}
+
+.text-divider {
+    font-size: $font-size-h5;
+    display: table;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        left: -115%;
+        height: 1px;
+        background: #d7d7d7;
+        background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, #fff 100%);
+        background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, #fff 100%);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, #fff 100%);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        right: -115%;
+        height: 1px;
+        background: #d7d7d7;
+        background: -moz-linear-gradient(-90deg, rgba(255, 255, 255, 0.2) 0%, #fff 100%);
+        background: -webkit-linear-gradient(-90deg, rgba(255, 255, 255, 0.2) 0%, #fff 100%);
+        background: linear-gradient(-90deg, rgba(255, 255, 255, 0.2) 0%, #fff 100%);
+    }
+}

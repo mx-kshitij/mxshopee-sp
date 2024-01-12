@@ -1,0 +1,108 @@
+.initial-wrapper {
+    height: 100px; 
+    width: 100px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $gray-primary;
+
+    h2 {
+        font-size: 50px;
+    }
+}
+
+.first-landing-content-wrapper {
+    .row {
+        margin: 5% 0;
+
+        img {
+            padding: 8%;
+            padding-right: 0;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        span {  
+            max-width: 75%;
+            display: block;
+            font-size: 18px;
+        }
+    }
+}
+
+.second-landing-content-wrapper {
+    .row {
+        margin: 5% 0;
+
+        img {
+            padding: 8%;
+            padding-left: 0;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        span {  
+            max-width: 75%;
+            display: block;
+            font-size: 18px;
+        }
+    }
+}
+
+.full-width-wrapper {
+    background-color: #fff;
+    padding: 0 !important;
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+
+    img {
+        position: absolute;
+        height: 50vh;
+        width: auto;
+        right: 0;
+        z-index: 1;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+    
+    span {        
+        font-size: 18px;
+    }
+
+    .container {
+        z-index: 2;
+    }
+}
+
+.mx-listview {
+    > ul {
+        > li {
+            &.selected {
+                background-color: $gray-primary;
+                color: #000;
+
+                &:hover {
+                    background-color: $gray;
+                }
+            }
+        }
+    }
+
+    &.comments-listview {
+        padding-top: 20px;
+        margin-top: 20px;
+
+        &:has(.mx-listview-empty) {
+            display: none;
+        }
+    }
+}
