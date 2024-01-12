@@ -1,0 +1,14 @@
+{
+  "name": "automated-test",
+  "version": "1.0.0",
+  "description": "automated-test-js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "oriana nerberka",
+  "license": "ISC",
+  "devDependencies": {
+    "webdriverio": "^8.27.0"
+  }
+}
