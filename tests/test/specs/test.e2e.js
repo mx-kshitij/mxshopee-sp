@@ -4,7 +4,7 @@ import DeveloperApp from '../pageobjects/developerapp.page.js'
 describe('Testing a Mendix Application', () => {
 
     beforeEach(async() => {
-        if (DeveloperApp.isDeveloperApp()) {
+        if (await DeveloperApp.isDeveloperApp()) {
             console.log("Is developer app!");
             await DeveloperApp.connect();
         }
