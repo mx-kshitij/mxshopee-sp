@@ -12,7 +12,8 @@
     "typescript": "^5.3.3"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.js",
+    "wdio-android-local": "wdio run ./wdio.android.local.conf.js",
+    "wdio-ios-local": "wdio run ./wdio.ios.local.conf.js",
     "wdio-web": "wdio run ./wdio-web.conf.js"
   },
   "dependencies": {
