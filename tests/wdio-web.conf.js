@@ -1,3 +1,5 @@
+import {testSpecsFlow,appSettings} from './web/variables.js'
+
 export const config = {
     //
     // ====================
@@ -20,9 +22,7 @@ export const config = {
     // The path of the spec files will be resolved relative from the directory of
     // of the config file unless it's absolute.
     //
-    specs: [
-        './web/specs/**/*.js'
-    ],
+    specs: testSpecsFlow,
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -84,7 +84,7 @@ export const config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost:8080',
+    baseUrl: appSettings.baseUrl,
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
