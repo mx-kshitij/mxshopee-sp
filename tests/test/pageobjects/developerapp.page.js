@@ -32,7 +32,10 @@ class DeveloperApp {
     }
 
     getPort() {
-        return "8080";
+        if (process.env.MXRUNTIME_PORT)
+            return process.env.MXRUNTIME_PORT;
+        else   
+            return "8080";
     }
 }
 
